@@ -13,6 +13,9 @@ const app = express();
 app.use(express.json());
 
 // /register
+app.get("",(req,res )=>{
+  return res.send("Helooooo")
+})
 app.post("/register", register);
 // .login
 app.post("/login", login);
