@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors")
-app.use(cors())
 require("dotenv").config()
 const connect = require("./configs/db");
 
@@ -11,6 +10,8 @@ const { register, login } = require("./controllers/auth.controller");
 const app = express();
 
 app.use(express.json());
+
+app.use(cors())
 
 // /register
 app.get("",(req,res )=>{
